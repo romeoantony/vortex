@@ -223,14 +223,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .set-card__body p { color: var(--secondary); font-size: 14px; }
 
 /* ========== FOOTER ========== */
-.footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 48px 0; background: #000; margin-top: 96px; }
-.footer__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-@media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr; gap: 32px; } }
-.footer__logo { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #fff; }
-.footer__links { display: flex; flex-direction: column; gap: 16px; }
-.footer__links a { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #666; transition: color 0.3s; }
-.footer__links a:hover { color: var(--tertiary); }
-.footer__copy { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #666; }
+.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 64px 0 40px; background: #0a0a0a; margin-top: 96px; }
+.footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 56px; margin-bottom: 56px; }
+@media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer__logo { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; letter-spacing: 0.2em; margin-bottom: 12px; }
+.footer__tagline { font-family: var(--font-body); font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 4px; }
+.footer__links { display: flex; flex-direction: column; gap: 14px; }
+.footer__links-heading { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tertiary); margin-bottom: 4px; }
+.footer__links a { font-family: var(--font-body); font-size: 15px; color: #aaa; transition: color 0.3s; }
+.footer__links a:hover { color: #fff; }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer__copy { font-family: var(--font-body); font-size: 13px; color: #666; }
 
 /* ========== ANIMATIONS ========== */
 .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
