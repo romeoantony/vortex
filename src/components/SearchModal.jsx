@@ -34,7 +34,7 @@ export default function SearchModal({ isOpen, onClose }) {
   if (!isOpen) return null
 
   const filteredArtists = artists.filter(a => a.name.toLowerCase().includes(query.toLowerCase()))
-  const filteredEvents = events.filter(e => e.title.toLowerCase().includes(query.toLowerCase()) || e.venue.toLowerCase().includes(query.toLowerCase()))
+  const filteredEvents = events.filter(e => e.title.toLowerCase().includes(query.toLowerCase()))
 
   const handleLinkClick = () => {
     onClose()
@@ -72,7 +72,6 @@ export default function SearchModal({ isOpen, onClose }) {
                           <img src={evt.image} alt={evt.title} />
                           <div>
                             <h4>{evt.title}</h4>
-                            <p>{evt.venue}</p>
                           </div>
                         </div>
                       </Link>
