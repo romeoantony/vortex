@@ -1,27 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import EventCard from '../components/EventCard'
 
-const events = [
-  {
-    title: 'TERMINAL VELOCITY', tag: 'TECHNO', day: '24', month: 'OCT',
-    venue: 'BOCHE, BANGALORE', artists: ['GATIX', 'KOBOSIL'],
-    image: '/assets/images/event-terminal-velocity.png',
-  },
-  {
-    title: 'ECHO CHAMBER', tag: 'AUDIO VISUAL', day: '12', month: 'NOV',
-    venue: 'JUST BLR, BANGALORE', artists: ['ANYMA', 'TALE OF US'],
-    image: '/assets/images/event-echo-chamber.png',
-  },
-  {
-    title: 'OBELISK 2024', tag: 'FESTIVAL', day: '05', month: 'DEC',
-    venue: 'CHURCH STREET SOCIAL, BANGALORE', artists: ['ERIC PRYDZ', 'MACEO PLEX'],
-    image: '/assets/images/event-obelisk.png',
-  },
-]
 
 export default function HomePage() {
   const heroBgRef = useRef(null)
+  const heroSectionRef = useRef(null)
+  const heroGlowRef = useRef(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -38,56 +22,77 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const scrollToTransmissions = () => {
-    document.getElementById('transmissions')?.scrollIntoView({ behavior: 'smooth' })
-  }
+  useEffect(() => {
+    const heroSection = heroSectionRef.current;
+    const heroGlow = heroGlowRef.current;
+    
+    if (!heroSection || !heroGlow) return;
+
+    const handleMouseMove = (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      heroGlow.style.opacity = '1';
+      heroGlow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(125,244,255,0.15) 0%, transparent 40%)`;
+    };
+
+    const handleMouseLeave = () => {
+      heroGlow.style.opacity = '0';
+    };
+
+    heroSection.addEventListener('mousemove', handleMouseMove);
+    heroSection.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      heroSection.removeEventListener('mousemove', handleMouseMove);
+      heroSection.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   return (
     <main>
       {/* Hero */}
-      <section className="hero" id="hero">
+      <section className="hero" id="hero" ref={heroSectionRef}>
+        <div className="hero__glow" id="hero-glow" ref={heroGlowRef}></div>
+        <div className="hero__scanlines"></div>
         <div className="hero__bg">
           <img
             ref={heroBgRef}
-            src="/assets/images/hero-festival.png"
-            alt="Electronic music festival with massive crowd and laser beams"
+            src="/assets/images/dj-controller-bg.png"
+            alt="Hero background"
           />
+          <div className="disco-lights">
+            <div className="spotlight spotlight-1"></div>
+            <div className="spotlight spotlight-2"></div>
+            <div className="spotlight spotlight-3"></div>
+            <div className="spotlight spotlight-4"></div>
+          </div>
           <div className="hero__overlay"></div>
           <div className="hero__overlay-top"></div>
         </div>
         <div className="hero__content">
-          <img src="/assets/images/logo.svg" alt="Vortex Logo" className="hero__logo" />
-          <h1 className="display-lg">
-            THE CALM BEFORE<br /><span className="accent">THE DROP</span>
+          <div className="hero__logo" style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}>
+            <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '240px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))' }} />
+          </div>
+          <h1 className="display-lg hero-title">
+            <div className="line-wrap">
+              <span className="word">CURATING</span> <span className="word">THE</span>
+            </div>
+            <div className="line-wrap">
+              <span className="word accent">UNDERGROUND</span>
+            </div>
           </h1>
-          <p className="body-lg">
-            Immersive sonic experiences. Brutal architecture. Pure energy. Welcome to the next generation of live electronic music events.
+          <p className="body-lg hero-subtitle">
+            Vortex is a premier event management company, specializing in immersive, unforgettable DJ experiences.
           </p>
-          <Link to="/event" className="btn-primary" id="hero-cta">GET TICKETS</Link>
-        </div>
-        <div className="scroll-indicator" onClick={scrollToTransmissions} style={{ cursor: 'pointer' }}>
-          <span className="label-caps" style={{ marginBottom: 8 }}>DESCEND</span>
-          <span className="material-symbols-outlined">keyboard_arrow_down</span>
+          <Link to="/events" className="btn-primary glitch-btn" id="hero-cta" data-text="EXPLORE EVENTS">
+            <span className="glitch-btn-text">EXPLORE EVENTS</span>
+          </Link>
         </div>
       </section>
 
-      {/* Upcoming Transmissions */}
-      <section className="section" id="transmissions">
-        <div className="container">
-          <div className="section__header">
-            <h2 className="headline-lg">UPCOMING TRANSMISSIONS</h2>
-            <a href="#">
-              VIEW ALL{' '}
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
-            </a>
-          </div>
-          <div className="events-grid">
-            {events.map((evt, i) => (
-              <EventCard key={evt.title} {...evt} delay={i * 0.1} />
-            ))}
-          </div>
-        </div>
-      </section>
+
     </main>
   )
 }

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Intro DJ Gatix",
+    "tag": "Gatix",
+    "day": "12",
+    "month": "Feb",
+    "image": "/assets/images/gatix_event.png",
+    "description": "Gatix and Leo",
+    "artists": [
+      "Gatix",
+      "Leo"
+    ],
+    "id": "intro-dj-gatix"
+  },
+  {
+    "title": "Test Event",
+    "tag": "TEST",
+    "day": "25",
+    "month": "DEC",
+    "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
+    "description": "This is a test event description.",
+    "artists": [
+      "Gatix",
+      "Leo"
+    ],
+    "id": "test-event"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Gatix",
+    "genres": [
+      "EDM",
+      "Techno"
+    ],
+    "bio": "Hey Ya'll",
+    "image": "/assets/images/gatix.png",
+    "listeners": "10000",
+    "followers": "5000",
+    "id": "gatix"
+  },
+  {
+    "name": "Leo",
+    "genres": [
+      "House",
+      "Trance"
+    ],
+    "bio": "Bringing the energy to the dance floor.",
+    "image": "/assets/images/leo.png",
+    "listeners": "8000",
+    "followers": "3000",
+    "id": "leo"
+  }
+]
