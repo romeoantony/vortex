@@ -59,9 +59,8 @@ export default function HomePage() {
         <div className="hero__bg">
           <img
             ref={heroBgRef}
-            src="/assets/images/placeholder-hero.png"
-            alt="Hero background placeholder"
-            style={{ display: 'none' }}
+            src="/assets/images/dj-controller-bg.png"
+            alt="Hero background"
           />
           <div className="disco-lights">
             <div className="spotlight spotlight-1"></div>

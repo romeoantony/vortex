@@ -7,11 +7,9 @@ export default function Footer() {
     <footer className="footer" id="footer">
       <div className="container">
         <div className="footer__grid">
-          <div className="footer__brand">
-            <Link to="/" className="navbar__logo" style={{ marginBottom: 16, display: 'inline-block' }}>
-              <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '96px', filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
-            </Link>
-            <p className="body-md">Vortex curates unforgettable audio-visual DJ experiences.</p>
+          <div>
+            <div className="footer__logo">VORTEX</div>
+            <p className="footer__tagline">Immersive sonic experiences.<br />Bangalore's underground, amplified.</p>
             <div className="visualizer" style={{ marginTop: 20 }}>
               {Array.from({ length: 7 }).map((_, i) => (
                 <div className="visualizer__bar" key={i}></div>
