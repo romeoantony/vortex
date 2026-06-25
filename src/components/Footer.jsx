@@ -8,8 +8,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div className="footer__brand">
-            <Link to="/" className="navbar__logo" style={{ marginBottom: 16, display: 'inline-block' }}>LOGO</Link>
-            <p className="body-md">Brand tagline placeholder. Briefly describe your project or company here.</p>
+            <Link to="/" className="navbar__logo" style={{ marginBottom: 16, display: 'inline-block' }}>
+              <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '32px' }} />
+            </Link>
+            <p className="body-md">Vortex curates unforgettable audio-visual DJ experiences.</p>
             <div className="visualizer" style={{ marginTop: 20 }}>
               {Array.from({ length: 7 }).map((_, i) => (
                 <div className="visualizer__bar" key={i}></div>
@@ -21,7 +23,6 @@ export default function Footer() {
             <Link to="/brochure">About / Brochure</Link>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <Link to="/admin" style={{ color: 'var(--tertiary)' }}>Admin Dashboard</Link>
           </div>
           <div className="footer__links">
             <span className="footer__links-heading">Connect</span>
@@ -32,7 +33,7 @@ export default function Footer() {
         </div>
         <div className="footer__bottom">
           <div className="container">
-            <p>© {new Date().getFullYear()} BRAND NAME. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} VORTEX. All rights reserved.</p>
           </div>
           <div className="footer__copy">
             Bangalore, India

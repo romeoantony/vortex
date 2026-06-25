@@ -28,7 +28,9 @@ export default function Navbar() {
         className="navbar"
         style={{ background: scrolled ? 'rgba(0,0,0,0.95)' : 'rgba(0,0,0,0.8)' }}
       >
-        <Link to="/" className="navbar__logo">LOGO</Link>
+        <Link to="/" className="navbar__logo">
+          <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '24px' }} />
+        </Link>
 
         <ul className={`navbar__links${menuOpen ? ' open' : ''}`}>
           <li><Link to="/events" className={isActive('/events') ? 'active' : ''}>EVENTS</Link></li>

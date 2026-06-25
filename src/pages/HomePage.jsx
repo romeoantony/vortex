@@ -67,17 +67,19 @@ export default function HomePage() {
           <div className="hero__overlay-top"></div>
         </div>
         <div className="hero__content">
-          <div className="hero__logo" style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 24, letterSpacing: 4 }}>LOGO</div>
+          <div className="hero__logo" style={{ marginBottom: 24 }}>
+            <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '48px' }} />
+          </div>
           <h1 className="display-lg hero-title">
             <div className="line-wrap">
-              <span className="word">HERO</span> <span className="word">HEADLINE</span> <span className="word">GOES</span>
+              <span className="word">CURATING</span> <span className="word">THE</span>
             </div>
             <div className="line-wrap">
-              <span className="word accent">RIGHT</span> <span className="word accent">HERE</span>
+              <span className="word accent">UNDERGROUND</span>
             </div>
           </h1>
           <p className="body-lg hero-subtitle">
-            Template subtitle placeholder. This area can be used to describe the core value proposition or main message of your brand.
+            Vortex is a premier event management company, specializing in immersive, unforgettable DJ experiences.
           </p>
           <Link to="/events" className="btn-primary glitch-btn" id="hero-cta" data-text="EXPLORE EVENTS">
             <span className="glitch-btn-text">EXPLORE EVENTS</span>

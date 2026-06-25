@@ -13,7 +13,6 @@ const BrochurePage = lazy(() => import('./pages/BrochurePage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 import { CustomCursor, NoiseOverlay } from './components/InteractiveElements'
 
-const AdminPage = lazy(() => import('./pages/AdminPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
           <Route path="/artists/:id" element={<ArtistPage />} />
           <Route path="/brochure" element={<BrochurePage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/admin" element={<AdminPage />} />
           <Route path="/artist" element={<Navigate to="/artists" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
