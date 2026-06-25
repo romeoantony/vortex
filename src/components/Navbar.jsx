@@ -29,7 +29,7 @@ export default function Navbar() {
         style={{ background: scrolled ? 'rgba(0,0,0,0.95)' : 'rgba(0,0,0,0.8)' }}
       >
         <Link to="/" className="navbar__logo">
-          <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '24px' }} />
+          <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '48px', filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
         </Link>
 
         <ul className={`navbar__links${menuOpen ? ' open' : ''}`}>

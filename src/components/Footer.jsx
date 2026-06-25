@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__brand">
             <Link to="/" className="navbar__logo" style={{ marginBottom: 16, display: 'inline-block' }}>
-              <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '32px' }} />
+              <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '64px', filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
             </Link>
             <p className="body-md">Vortex curates unforgettable audio-visual DJ experiences.</p>
             <div className="visualizer" style={{ marginTop: 20 }}>
