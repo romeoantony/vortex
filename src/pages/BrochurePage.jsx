@@ -2,24 +2,24 @@ import { useState, useEffect } from 'react'
 
 const brochurePages = [
   {
-    title: "01 / SECTION ONE",
-    subtitle: "SUBTITLE PLACEHOLDER",
-    content: "This is a generic template framework. All data has been cleared. This space can be used to describe your mission statement, brand identity, or core values."
+    title: "01 / MISSION STATEMENT",
+    subtitle: "THE VORTEX EXPERIENCE",
+    content: "Vortex is an elite event management company specializing in high-energy DJ performances and underground electronic music events. Our mission is to create unforgettable, immersive experiences that connect audiences with cutting-edge sound."
   },
   {
-    title: "02 / SECTION TWO",
-    subtitle: "SUBTITLE PLACEHOLDER",
-    content: "Secondary section content goes here. You can detail your audio production specifications, venue partnerships, or technical rider information."
+    title: "02 / AUDIO & VISUALS",
+    subtitle: "SENSORY OVERLOAD",
+    content: "We provide industry-leading audio production and state-of-the-art visual installations. From custom DJ booth designs to massive laser and lighting rigs, we engineer environments that amplify the energy of the music."
   },
   {
-    title: "03 / SECTION THREE",
-    subtitle: "SUBTITLE PLACEHOLDER",
-    content: "Tertiary section content. Use this to highlight featured artists, past events, or community initiatives."
+    title: "03 / ARTIST ROSTER",
+    subtitle: "CURATING TALENT",
+    content: "We partner with top-tier electronic music producers and underground DJs to curate lineups that push boundaries. Our booking team ensures the perfect sonic journey from the opening set to the final drop."
   },
   {
-    title: "04 / SECTION FOUR",
-    subtitle: "SUBTITLE PLACEHOLDER",
-    content: "Final section content. Describe partnership opportunities, sponsorship tiers, or contact information."
+    title: "04 / PARTNERSHIPS",
+    subtitle: "JOIN THE MOVEMENT",
+    content: "We are always looking to collaborate with venues, sponsors, and record labels. Reach out to our team to discuss booking inquiries, brand integrations, or co-hosting an upcoming Vortex event."
   }
 ]
 
@@ -57,7 +57,7 @@ export default function BrochurePage() {
             Brand <span className="accent">Brochure</span>
           </h1>
           <p className="brochure-hero__subtitle body-lg">
-            Template subtitle placeholder. Replace this text with your organization's primary offering, mission statement, or core focus areas.
+            Immersive DJ Events. State-of-the-art production. Unforgettable nights.
           </p>
         </div>
       </section>
@@ -72,10 +72,10 @@ export default function BrochurePage() {
 
           <div className="capabilities-grid">
             {[
-              { icon: 'graphic_eq', title: 'Capability One', desc: 'Placeholder description for your first core capability or offering.' },
-              { icon: 'blur_on', title: 'Capability Two', desc: 'Placeholder description for your second core capability or offering.' },
-              { icon: 'cyclone', title: 'Capability Three', desc: 'Placeholder description for your third core capability or offering.' },
-              { icon: 'token', title: 'Capability Four', desc: 'Placeholder description for your fourth core capability or offering.' },
+              { icon: 'graphic_eq', title: 'Audio Production', desc: 'World-class sound systems engineered for electronic music.' },
+              { icon: 'blur_on', title: 'Stage Design', desc: 'Custom lighting, lasers, and visual installations.' },
+              { icon: 'cyclone', title: 'Event Management', desc: 'End-to-end event planning, from ticketing to security.' },
+              { icon: 'token', title: 'Artist Booking', desc: 'Curating lineups with top-tier and emerging DJs.' },
             ].map((cap, i) => (
               <div className="capability-card" key={i}>
                 <span className="material-symbols-outlined capability-card__icon">{cap.icon}</span>
@@ -151,16 +151,16 @@ export default function BrochurePage() {
         <div className="container">
           <div className="brochure-stats">
             <div>
-              <div className="brochure-stat__value">00k+</div>
-              <div className="brochure-stat__label">Statistic One</div>
+              <div className="brochure-stat__value">100k+</div>
+              <div className="brochure-stat__label">Attendees</div>
             </div>
             <div>
-              <div className="brochure-stat__value">00+</div>
-              <div className="brochure-stat__label">Statistic Two</div>
+              <div className="brochure-stat__value">150+</div>
+              <div className="brochure-stat__label">Events Hosted</div>
             </div>
             <div>
-              <div className="brochure-stat__value">0+</div>
-              <div className="brochure-stat__label">Statistic Three</div>
+              <div className="brochure-stat__value">50+</div>
+              <div className="brochure-stat__label">DJ Partnerships</div>
             </div>
           </div>
         </div>
