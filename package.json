@@ -11,7 +11,6 @@
     "admin": "node admin-server.js"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.42",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "react": "^19.2.5",

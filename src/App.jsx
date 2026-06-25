@@ -11,7 +11,6 @@ const ArtistsPage = lazy(() => import('./pages/ArtistsPage'))
 const ArtistPage = lazy(() => import('./pages/ArtistPage'))
 const BrochurePage = lazy(() => import('./pages/BrochurePage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
-import SmoothScroll from './components/SmoothScroll'
 import { CustomCursor, NoiseOverlay } from './components/InteractiveElements'
 
 const AdminPage = lazy(() => import('./pages/AdminPage'))
@@ -19,7 +18,6 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 function App() {
   return (
-    <SmoothScroll>
       <>
         <CustomCursor />
         <NoiseOverlay />
@@ -40,7 +38,6 @@ function App() {
       </Suspense>
         <Footer />
       </>
-    </SmoothScroll>
   )
 }
 
