@@ -4,11 +4,11 @@ import Lenis from '@studio-freight/lenis'
 export default function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.15, // Higher lerp = faster, less delay
+      lerp: 0.8, // Very high lerp = practically zero delay
+      wheelMultiplier: 1.5, // Scroll faster per wheel tick
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
-      mouseMultiplier: 1,
       smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
