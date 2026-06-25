@@ -64,10 +64,10 @@ export default function HomePage() {
             style={{ display: 'none' }}
           />
           <div className="disco-lights">
-            <div className="light light-1"></div>
-            <div className="light light-2"></div>
-            <div className="light light-3"></div>
-            <div className="light light-4"></div>
+            <div className="spotlight spotlight-1"></div>
+            <div className="spotlight spotlight-2"></div>
+            <div className="spotlight spotlight-3"></div>
+            <div className="spotlight spotlight-4"></div>
           </div>
           <div className="hero__overlay"></div>
           <div className="hero__overlay-top"></div>
