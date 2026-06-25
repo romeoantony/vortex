@@ -13,7 +13,7 @@ export default function AdminPage() {
   const [editArtistId, setEditArtistId] = useState(null)
 
   // Event Form State
-  const initialEventForm = { title: '', tag: '', date: '', venue: '', image: '', description: '', artists: [] }
+  const initialEventForm = { title: '', tag: '', date: '', image: '', description: '', artists: [] }
   const [eventForm, setEventForm] = useState(initialEventForm)
 
   // Artist Form State
@@ -77,7 +77,6 @@ export default function AdminPage() {
     setEventForm({
       title: evt.title || '',
       tag: evt.tag || '',
-      venue: evt.venue || '',
       image: evt.image || '',
       description: evt.description || '',
       date: dateStr,
@@ -218,7 +217,6 @@ export default function AdminPage() {
                 <label className="inquiry-form__label">Title <input required type="text" name="title" value={eventForm.title} onChange={handleEventChange} className="inquiry-form__input" /></label>
                 <div className="form-row">
                   <label className="inquiry-form__label">Tag (e.g. LIVE) <input required type="text" name="tag" value={eventForm.tag} onChange={handleEventChange} className="inquiry-form__input" /></label>
-                  <label className="inquiry-form__label">Venue <input required type="text" name="venue" value={eventForm.venue} onChange={handleEventChange} className="inquiry-form__input" /></label>
                 </div>
                 
                 <label className="inquiry-form__label">Date <input required type="date" name="date" value={eventForm.date} onChange={handleEventChange} className="inquiry-form__input" /></label>
@@ -249,7 +247,7 @@ export default function AdminPage() {
                   <div key={evt.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 0', borderBottom: '1px solid var(--surface-variant)' }}>
                     <div>
                       <strong style={{ display: 'block', fontSize: '1.2rem' }}>{evt.title}</strong>
-                      <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{evt.day} {evt.month} | {evt.venue}</span>
+                      <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{evt.day} {evt.month}</span>
                     </div>
                     <div style={{ display: 'flex', gap: 16 }}>
                       <button onClick={() => loadEventForEdit(evt)} style={{ color: 'var(--tertiary)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>Edit</button>

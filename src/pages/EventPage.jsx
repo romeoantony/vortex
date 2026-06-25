@@ -57,9 +57,6 @@ export default function EventPage() {
                 <div>
                   <span className="material-symbols-outlined">schedule</span> {event.time || 'TIME TBA'}
                 </div>
-                <div>
-                  <div><span className="material-symbols-outlined">location_on</span> {event.venue}</div>
-                </div>
               </div>
             </div>
           </div>

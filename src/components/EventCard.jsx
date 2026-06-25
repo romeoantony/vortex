@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react'
 import FadeUp from './FadeUp'
 import ScrambleText from './ScrambleText'
 
-export default function EventCard({ id, title, tag, day, month, venue, artists = [], image, delay = 0 }) {
+export default function EventCard({ id, title, tag, day, month, artists = [], image, delay = 0 }) {
   const navigate = useNavigate()
   const cardRef = useRef(null)
 
@@ -56,10 +56,6 @@ export default function EventCard({ id, title, tag, day, month, venue, artists =
           </div>
           <div className="event-card__info">
             <ScrambleText text={title} as="h3" />
-            <div className="event-card__location">
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>location_on</span>
-              {venue}
-            </div>
             <div className="event-card__artists">
               {artists.map((a, i) => <span key={i}>{a}</span>)}
             </div>
