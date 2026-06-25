@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import PartyBackground from '../components/PartyBackground'
 import ArtistCard from '../components/ArtistCard'
 import artists from '../data/artists.json'
 
@@ -7,6 +8,7 @@ export default function ArtistsPage() {
 
   return (
     <main>
+      <PartyBackground imageSrc="/assets/images/leo.png" />
       <section className="artists-page-hero">
         <div className="container">
           <p className="label-caps" style={{ color: 'var(--tertiary)', marginBottom: 12 }}>ROSTER</p>

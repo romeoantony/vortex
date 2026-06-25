@@ -95,6 +95,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .hero__content { position: relative; z-index: 10; text-align: center; padding: 80px 20px 0; }
 
 /* ========== SPOTLIGHTS ========== */
+.party-bg-wrapper { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 .disco-lights { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; mix-blend-mode: screen; perspective: 1000px; }
 
 .spotlight { position: absolute; opacity: 1; filter: blur(2px) brightness(1.5) saturate(2); }

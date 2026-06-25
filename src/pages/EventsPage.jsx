@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import PartyBackground from '../components/PartyBackground'
 import EventCard from '../components/EventCard'
 import events from '../data/events.json'
 
@@ -9,6 +10,7 @@ export default function EventsPage() {
 
   return (
     <main>
+      <PartyBackground imageSrc="/assets/images/gatix_event.png" />
       <section className="contact-hero" style={{ padding: '160px 0 64px', borderBottom: '1px solid var(--surface-variant)' }}>
         <div className="container">
           <p className="label-caps" style={{ color: 'var(--tertiary)', marginBottom: 12 }}>DISCOVER</p>

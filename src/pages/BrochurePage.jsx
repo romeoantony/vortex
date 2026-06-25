@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PartyBackground from '../components/PartyBackground'
 
 const brochurePages = [
   {
@@ -50,6 +51,7 @@ export default function BrochurePage() {
 
   return (
     <main>
+      <PartyBackground imageSrc="/assets/images/gatix_event.png" />
       {/* Hero Section */}
       <section className="brochure-hero">
         <div className="container">
