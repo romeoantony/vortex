@@ -33,6 +33,7 @@ export default function Navbar() {
         </Link>
 
         <ul className={`navbar__links${menuOpen ? ' open' : ''}`}>
+          <li><Link to="/" className={isActive('/') ? 'active' : ''}>HOME</Link></li>
           <li><Link to="/events" className={isActive('/events') ? 'active' : ''}>EVENTS</Link></li>
           <li><Link to="/artists" className={isArtistsActive() ? 'active' : ''}>ARTISTS</Link></li>
           <li><Link to="/brochure" className={isActive('/brochure') ? 'active' : ''}>BROCHURE</Link></li>
