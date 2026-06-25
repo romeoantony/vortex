@@ -60,29 +60,29 @@ export default function ArtistPage() {
           <div className="artist-meta-bar">
             <div className="artist-stats glass">
               <div className="artist-stats__item">
-                <span className="artist-stats__value">{artist.stats.monthlyListeners}</span>
+                <span className="artist-stats__value">{artist.listeners || artist.stats?.monthlyListeners || 'N/A'}</span>
                 <span className="label-caps artist-stats__label">Monthly Listeners</span>
               </div>
               <div className="artist-stats__divider"></div>
               <div className="artist-stats__item">
-                <span className="artist-stats__value">{artist.stats.followers}</span>
+                <span className="artist-stats__value">{artist.followers || artist.stats?.followers || 'N/A'}</span>
                 <span className="label-caps artist-stats__label">Followers</span>
               </div>
             </div>
             <div className="artist-social">
-              {artist.socialLinks.instagram && (
+              {artist.socialLinks?.instagram && (
                 <a href={artist.socialLinks.instagram} className="artist-social__link" aria-label="Instagram">
                   <span className="material-symbols-outlined">photo_camera</span>
                   <span className="label-caps">INSTAGRAM</span>
                 </a>
               )}
-              {artist.socialLinks.spotify && (
+              {artist.socialLinks?.spotify && (
                 <a href={artist.socialLinks.spotify} className="artist-social__link" aria-label="Spotify">
                   <span className="material-symbols-outlined">music_note</span>
                   <span className="label-caps">SPOTIFY</span>
                 </a>
               )}
-              {artist.socialLinks.soundcloud && (
+              {artist.socialLinks?.soundcloud && (
                 <a href={artist.socialLinks.soundcloud} className="artist-social__link" aria-label="SoundCloud">
                   <span className="material-symbols-outlined">cloud</span>
                   <span className="label-caps">SOUNDCLOUD</span>
@@ -101,7 +101,7 @@ export default function ArtistPage() {
             <a href="#">VIEW ALL <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span></a>
           </div>
           <div className="shows-list">
-            {artist.shows.map((show, i) => (
+            {(artist.shows || []).map((show, i) => (
               <FadeUp key={show.name} delay={i * 0.05}>
                 <div className="show-item">
                   <div className="show-item__date">
@@ -128,7 +128,7 @@ export default function ArtistPage() {
             <h2 className="headline-lg" style={{ color: 'var(--primary)', textTransform: 'uppercase' }}>RECENT SETS</h2>
           </div>
           <div className="sets-grid">
-            {artist.sets.map((set, i) => (
+            {(artist.sets || []).map((set, i) => (
               <FadeUp key={set.title} delay={i * 0.1}>
                 <div className="set-card">
                   <div className="set-card__img">
