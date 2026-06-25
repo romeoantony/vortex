@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import PartyBackground from '../components/PartyBackground'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -15,6 +16,7 @@ export default function ContactPage() {
 
   return (
     <main>
+      <PartyBackground imageSrc="/assets/images/gatix_event.png" />
       <section className="contact-hero" style={{ padding: '160px 0 64px', borderBottom: '1px solid var(--surface-variant)' }}>
         <div className="container">
           <p className="label-caps" style={{ color: 'var(--tertiary)', marginBottom: 12 }}>REACH OUT</p>
@@ -32,11 +34,11 @@ export default function ContactPage() {
               <h2 className="headline-md" style={{ marginBottom: 24 }}>HEADQUARTERS</h2>
               <div style={{ marginBottom: 32 }}>
                 <h4 className="label-caps" style={{ color: 'var(--tertiary)', marginBottom: 8 }}>LOCATION</h4>
-                <p style={{ color: 'var(--secondary)' }}>ADDRESS LINE 1<br/>CITY, COUNTRY</p>
+                <p style={{ color: 'var(--secondary)' }}>Bangalore, India</p>
               </div>
               <div style={{ marginBottom: 32 }}>
                 <h4 className="label-caps" style={{ color: 'var(--tertiary)', marginBottom: 8 }}>EMAIL</h4>
-                <p style={{ color: 'var(--secondary)' }}>HELLO@BRAND.XYZ</p>
+                <p style={{ color: 'var(--secondary)' }}>info@vortexevents.in</p>
               </div>
             </div>
 
