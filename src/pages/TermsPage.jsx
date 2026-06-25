@@ -5,9 +5,9 @@ export default function TermsPage() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
-    <main>
+    <main style={{ display: 'flex', alignItems: 'center', paddingTop: 72 }}>
       <PartyBackground imageSrc="/assets/images/dj-controller-bg.png" />
-      <section className="section" style={{ paddingTop: 120 }}>
+      <section className="section" style={{ width: '100%', padding: '64px 0' }}>
         <div className="container" style={{ maxWidth: 800 }}>
           <h1 className="headline-lg" style={{ color: 'var(--primary)', marginBottom: 24 }}>TERMS OF SERVICE</h1>
           <p className="body-md" style={{ color: 'var(--on-surface-variant)', marginBottom: 16 }}>

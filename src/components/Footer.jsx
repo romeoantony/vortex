@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
           <div className="footer__links">
             <span className="footer__links-heading">Connect</span>
-            <a href="#">Instagram</a>
+            <a href="https://instagram.com/vortexevents.in" target="_blank" rel="noopener noreferrer">Instagram</a>
             <Link to="/partnerships">Partnerships</Link>
             <Link to="/contact">Contact</Link>
           </div>
