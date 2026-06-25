@@ -37,6 +37,8 @@ export default function Navbar() {
           <li><Link to="/events" className={isActive('/events') ? 'active' : ''}>EVENTS</Link></li>
           <li><Link to="/artists" className={isArtistsActive() ? 'active' : ''}>ARTISTS</Link></li>
           <li><Link to="/brochure" className={isActive('/brochure') ? 'active' : ''}>BROCHURE</Link></li>
+          <li><Link to="/partnerships" className={isActive('/partnerships') ? 'active' : ''}>PARTNERSHIPS</Link></li>
+          <li><Link to="/contact" className={isActive('/contact') ? 'active' : ''}>CONTACT</Link></li>
         </ul>
 
         <div className="navbar__right">
