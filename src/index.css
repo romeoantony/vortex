@@ -310,7 +310,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .venue-item__city { color: var(--on-surface-variant); }
 
 /* ========== FOOTER ========== */
-.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 64px 0 40px; background: #0a0a0a; margin-top: 96px; }
+.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 64px 0 40px; background: #0a0a0a; }
 .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 56px; margin-bottom: 56px; }
 @media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr; gap: 40px; } }
 .footer__logo { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: #fff; letter-spacing: 0.2em; margin-bottom: 12px; }
