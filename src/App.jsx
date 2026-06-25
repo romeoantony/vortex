@@ -11,14 +11,13 @@ const ArtistsPage = lazy(() => import('./pages/ArtistsPage'))
 const ArtistPage = lazy(() => import('./pages/ArtistPage'))
 const BrochurePage = lazy(() => import('./pages/BrochurePage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
-import { CustomCursor, NoiseOverlay } from './components/InteractiveElements'
+import { NoiseOverlay } from './components/InteractiveElements'
 
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 function App() {
   return (
       <>
-        <CustomCursor />
         <NoiseOverlay />
         <Navbar />
       <Suspense fallback={<PageLoader />}>
