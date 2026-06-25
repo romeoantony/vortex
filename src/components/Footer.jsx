@@ -19,13 +19,13 @@ export default function Footer() {
           <div className="footer__links">
             <span className="footer__links-heading">Company</span>
             <Link to="/brochure">About / Brochure</Link>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
           <div className="footer__links">
             <span className="footer__links-heading">Connect</span>
             <a href="#">Instagram</a>
-            <a href="#">Partnerships</a>
+            <Link to="/partnerships">Partnerships</Link>
             <Link to="/contact">Contact</Link>
           </div>
         </div>

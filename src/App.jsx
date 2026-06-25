@@ -11,6 +11,9 @@ const ArtistsPage = lazy(() => import('./pages/ArtistsPage'))
 const ArtistPage = lazy(() => import('./pages/ArtistPage'))
 const BrochurePage = lazy(() => import('./pages/BrochurePage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
+const TermsPage = lazy(() => import('./pages/TermsPage'))
+const PartnershipsPage = lazy(() => import('./pages/PartnershipsPage'))
 import { NoiseOverlay } from './components/InteractiveElements'
 
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
@@ -29,6 +32,9 @@ function App() {
           <Route path="/artists/:id" element={<ArtistPage />} />
           <Route path="/brochure" element={<BrochurePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/partnerships" element={<PartnershipsPage />} />
           <Route path="/artist" element={<Navigate to="/artists" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
