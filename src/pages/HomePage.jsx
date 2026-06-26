@@ -57,10 +57,13 @@ export default function HomePage() {
         <div className="hero__glow" id="hero-glow" ref={heroGlowRef}></div>
         <div className="hero__scanlines"></div>
         <div className="hero__bg">
-          <img
+          <video
             ref={heroBgRef}
-            src="/assets/images/dj-controller-bg.png"
-            alt="Hero background"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src="https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
           />
           <div className="disco-lights">
             <div className="spotlight spotlight-1"></div>
