@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import PartyBackground from '../components/PartyBackground'
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false)
+  const [state, handleSubmit] = useForm('mvzjapgj')
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Simulate sending transmission
-    setSubmitted(true)
-  }
 
   return (
     <main>
@@ -43,7 +38,7 @@ export default function ContactPage() {
             </div>
 
             <div className="contact-form-container">
-              {submitted ? (
+              {state.succeeded ? (
                 <div className="success-message fade-up visible" style={{ padding: 48, background: 'var(--surface-container)', border: '1px solid var(--tertiary)', textAlign: 'center' }}>
                   <span className="material-symbols-outlined" style={{ fontSize: 48, color: 'var(--tertiary)', marginBottom: 16 }}>check_circle</span>
                   <h3 className="headline-md">TRANSMISSION SENT</h3>
@@ -53,21 +48,25 @@ export default function ContactPage() {
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="form-group" style={{ marginBottom: 24 }}>
                     <label htmlFor="name" className="label-caps" style={{ display: 'block', marginBottom: 8 }}>NAME</label>
-                    <input type="text" id="name" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <input type="text" id="name" name="name" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} />
                   </div>
                   <div className="form-group" style={{ marginBottom: 24 }}>
                     <label htmlFor="email" className="label-caps" style={{ display: 'block', marginBottom: 8 }}>EMAIL</label>
-                    <input type="email" id="email" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <input type="email" id="email" name="email" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
                   </div>
                   <div className="form-group" style={{ marginBottom: 24 }}>
                     <label htmlFor="subject" className="label-caps" style={{ display: 'block', marginBottom: 8 }}>SUBJECT</label>
-                    <input type="text" id="subject" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <input type="text" id="subject" name="subject" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none' }} />
+                    <ValidationError prefix="Subject" field="subject" errors={state.errors} />
                   </div>
                   <div className="form-group" style={{ marginBottom: 32 }}>
                     <label htmlFor="message" className="label-caps" style={{ display: 'block', marginBottom: 8 }}>MESSAGE</label>
-                    <textarea id="message" rows="5" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none', resize: 'vertical' }}></textarea>
+                    <textarea id="message" name="message" rows="5" required style={{ width: '100%', padding: '12px 16px', background: 'var(--surface-container-high)', border: '1px solid var(--outline-variant)', color: '#fff', outline: 'none', resize: 'vertical' }}></textarea>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
                   </div>
-                  <button type="submit" className="btn-primary glitch-btn" data-text="SEND TRANSMISSION">
+                  <button type="submit" disabled={state.submitting} className="btn-primary glitch-btn" data-text="SEND TRANSMISSION">
                     <span className="glitch-btn-text">SEND TRANSMISSION</span>
                   </button>
                 </form>
