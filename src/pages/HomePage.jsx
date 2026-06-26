@@ -73,7 +73,7 @@ export default function HomePage() {
         </div>
         <div className="hero__content">
           <div className="hero__logo" style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}>
-            <img src="/assets/images/logo.svg" alt="Vortex" style={{ height: '240px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))' }} />
+            <img src="/assets/images/logo.svg" alt="Vortex" className="logo-animate" style={{ height: '240px' }} />
           </div>
           <h1 className="display-lg hero-title">
             <div className="line-wrap">

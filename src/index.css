@@ -666,3 +666,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   }
 }
 
+/* ========== LOGO ANIMATION ========== */
+.logo-animate {
+  animation: kick-drum 0.46s cubic-bezier(0.1, 0.9, 0.2, 1) infinite, slow-spin 15s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes kick-drum {
+  0% { scale: 1.15; filter: drop-shadow(0 0 40px rgba(125,244,255,0.9)); }
+  30% { scale: 1; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); }
+  100% { scale: 1; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); }
+}
+
+@keyframes slow-spin {
+  0% { rotate: 0deg; }
+  100% { rotate: 360deg; }
+}
