@@ -3,7 +3,7 @@ import { useForm, ValidationError } from '@formspree/react'
 import PartyBackground from '../components/PartyBackground'
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm('mvzjapgj')
+  const [state, handleSubmit] = useForm('xojodaey')
 
   useEffect(() => {
     window.scrollTo(0, 0)
