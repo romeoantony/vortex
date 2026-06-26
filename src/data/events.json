@@ -13,6 +13,18 @@
     "id": "intro-dj-gatix"
   },
   {
+    "title": "Intro DJ Leo",
+    "tag": "Leo",
+    "day": "22",
+    "month": "Mar",
+    "image": "/assets/images/leo_event.png",
+    "description": "Experience the ultimate introduction of DJ Leo with electrifying beats and neon vibes.",
+    "artists": [
+      "Leo"
+    ],
+    "id": "intro-dj-leo"
+  },
+  {
     "title": "Test Event",
     "tag": "TEST",
     "day": "25",
