@@ -43,7 +43,7 @@ export default function EventCard({ id, title, tag, day, month, artists = [], im
     <FadeUp delay={delay}>
       <article className="event-card" ref={cardRef} onClick={() => navigate(id ? `/event/${id}` : '#')}>
         <div className="event-card__img">
-          <img src={image} alt={`${title} event`} />
+          <img src={image} alt={`${title} event`} loading="lazy" />
           <div className="event-card__gradient"></div>
         </div>
         <div className="event-card__content">

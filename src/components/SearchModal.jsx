@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import events from '../data/events.json'
 import artists from '../data/artists.json'
 
@@ -16,13 +16,13 @@ const staticPages = [
 export default function SearchModal({ isOpen, onClose }) {
   const [query, setQuery] = useState('')
   const inputRef = useRef(null)
-  const navigate = useNavigate()
 
   useEffect(() => {
     if (isOpen) {
       inputRef.current?.focus()
       document.body.style.overflow = 'hidden'
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setQuery('')
       document.body.style.overflow = ''
     }

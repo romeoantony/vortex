@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function PartyBackground({ imageSrc }) {
   return (
     <div className="party-bg-wrapper">

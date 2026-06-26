@@ -98,7 +98,7 @@ export default function ArtistPage() {
         <div className="container">
           <div className="section__header">
             <h2 className="headline-lg" style={{ color: 'var(--primary)', textTransform: 'uppercase' }}>UPCOMING SHOWS</h2>
-            <a href="#">VIEW ALL <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span></a>
+            <Link to="/events">VIEW ALL <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span></Link>
           </div>
           <div className="shows-list">
             {(artist.shows || []).map((show, i) => (

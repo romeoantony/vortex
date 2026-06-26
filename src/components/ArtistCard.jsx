@@ -8,7 +8,7 @@ export default function ArtistCard({ id, name, genres, image, stats, delay = 0 }
     <FadeUp delay={delay}>
       <article className="artist-card" onClick={() => navigate(`/artists/${id}`)}>
         <div className="artist-card__img">
-          <img src={image} alt={`${name}`} />
+          <img src={image} alt={`${name}`} loading="lazy" />
           <div className="artist-card__gradient"></div>
         </div>
         <div className="artist-card__content">

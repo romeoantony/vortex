@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const chars = '!<>-_\\\\/[]{}—=+*^?#________'
 
@@ -8,7 +8,6 @@ export default function ScrambleText({ text, as: Component = 'span', className =
   
   useEffect(() => {
     let frame = 0
-    let timeoutId
     let animationFrameId
     
     const scramble = () => {
@@ -40,7 +39,6 @@ export default function ScrambleText({ text, as: Component = 'span', className =
 
     return () => {
       cancelAnimationFrame(animationFrameId)
-      clearTimeout(timeoutId)
     }
   }, [text, isHovering])
 
