@@ -92,7 +92,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .hero__bg { position: absolute; inset: 0; }
 .hero__glow { position: absolute; inset: 0; pointer-events: none; z-index: 1; background: radial-gradient(circle at 50% 50%, rgba(125,244,255,0.15) 0%, transparent 50%); opacity: 0; transition: opacity 0.5s; }
 .hero__scanlines { position: absolute; inset: 0; pointer-events: none; z-index: 2; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 4px, 3px 100%; opacity: 0.4; }
-.hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; }
 .hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg), rgba(19,19,20,0.8) 50%, transparent); }
 .hero__overlay-top { position: absolute; top: 0; left: 0; right: 0; height: 160px; background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent); }
 .hero__content { position: relative; z-index: 10; text-align: center; padding: 80px 20px 0; }
@@ -101,64 +101,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .party-bg-wrapper { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 .party-bg-image { position: absolute; inset: 0; z-index: 0; }
 .party-bg-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; mix-blend-mode: luminosity; }
-.party-bg-overlay { position: absolute; inset: 0; background: rgba(19,19,20,0.85); z-index: 1; }
 
-.party-orbs { position: absolute; inset: 0; overflow: hidden; mix-blend-mode: screen; filter: blur(80px); z-index: 2; opacity: 0.8; }
-.orb { position: absolute; border-radius: 50%; animation: float-orb 12s infinite alternate ease-in-out; }
-.orb-1 { width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(255,0,255,1) 0%, transparent 70%); top: -10%; left: -10%; animation-delay: 0s; }
-.orb-2 { width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(0,255,255,1) 0%, transparent 70%); bottom: -20%; right: -10%; animation-delay: -4s; }
-.orb-3 { width: 70vw; height: 70vw; background: radial-gradient(circle, rgba(200,0,255,0.8) 0%, transparent 70%); top: 30%; left: 20%; animation-delay: -8s; }
 
-@keyframes float-orb {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(8vw, -8vh) scale(1.1); }
-}
 
-/* ========== SPOTLIGHTS (Homepage) ========== */
-.disco-lights { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; mix-blend-mode: screen; perspective: 1000px; }
 
-.spotlight { position: absolute; opacity: 1; filter: blur(2px) brightness(1.5) saturate(2); }
-
-.spotlight-1 {
-  top: -20%; left: -30%; width: 100vw; height: 120vh;
-  transform-origin: 50% 0%;
-  background: conic-gradient(from 150deg at 50% 0%, transparent 0deg, rgba(0,255,255,1) 30deg, transparent 60deg);
-  mask-image: radial-gradient(circle at 50% 0%, black 10%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at 50% 0%, black 10%, transparent 80%);
-  animation: sweep-1 6s ease-in-out infinite alternate;
-}
-
-.spotlight-2 {
-  top: -20%; right: -30%; width: 100vw; height: 120vh;
-  transform-origin: 50% 0%;
-  background: conic-gradient(from 150deg at 50% 0%, transparent 0deg, rgba(255,0,255,1) 30deg, transparent 60deg);
-  mask-image: radial-gradient(circle at 50% 0%, black 10%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at 50% 0%, black 10%, transparent 80%);
-  animation: sweep-2 7s ease-in-out infinite alternate;
-}
-
-.spotlight-3 {
-  bottom: -20%; left: 10%; width: 120vw; height: 120vh;
-  transform-origin: 50% 100%;
-  background: conic-gradient(from 330deg at 50% 100%, transparent 0deg, rgba(200,0,255,0.9) 30deg, transparent 60deg);
-  mask-image: radial-gradient(circle at 50% 100%, black 10%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle at 50% 100%, black 10%, transparent 70%);
-  animation: sweep-3 8s ease-in-out infinite alternate;
-}
-
-.spotlight-4 {
-  bottom: -20%; right: 10%; width: 120vw; height: 120vh;
-  transform-origin: 50% 100%;
-  background: conic-gradient(from 330deg at 50% 100%, transparent 0deg, rgba(0,128,255,0.9) 30deg, transparent 60deg);
-  mask-image: radial-gradient(circle at 50% 100%, black 10%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle at 50% 100%, black 10%, transparent 70%);
-  animation: sweep-4 9s ease-in-out infinite alternate;
-}
-
-@keyframes sweep-1 { 0% { transform: rotate(-40deg); } 100% { transform: rotate(40deg); } }
-@keyframes sweep-2 { 0% { transform: rotate(40deg); } 100% { transform: rotate(-40deg); } }
-@keyframes sweep-3 { 0% { transform: rotate(-30deg); } 100% { transform: rotate(30deg); } }
-@keyframes sweep-4 { 0% { transform: rotate(30deg); } 100% { transform: rotate(-30deg); } }
 
 .hero__logo { width: min(320px, 60vw); margin: 0 auto 32px; filter: drop-shadow(0 0 30px rgba(255,255,255,0.3)); animation: logo-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: scale(1.1); filter: blur(10px); }
 @keyframes logo-reveal { to { opacity: 1; transform: scale(1); filter: blur(0); } }
@@ -191,17 +137,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .event-card {
   position: relative; overflow: hidden; height: 500px; display: flex; flex-direction: column;
-  justify-content: flex-end; cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s, transform 0.1s ease-out;
-  background: var(--surface-container); transform-style: preserve-3d; will-change: transform;
+  justify-content: flex-end; cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s;
+  background: var(--surface-container);
 }
 .event-card:hover { border-color: #fff; }
 .event-card__img { position: absolute; inset: 0; }
-.event-card__img img { width: 100%; height: 100%; object-fit: cover; transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
-.event-card:hover .event-card__img img { 
-  transform: scale(1.05); 
-  filter: contrast(1.2) saturate(1.5) hue-rotate(90deg);
-  mix-blend-mode: hard-light;
-}
+.event-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+.event-card:hover .event-card__img img { transform: scale(1.05); }
 .event-card__gradient { position: absolute; inset: 0; background: linear-gradient(to top, #000, rgba(0,0,0,0.6) 50%, transparent); pointer-events: none; }
 .event-card__content { position: relative; z-index: 2; padding: 24px; }
 .event-card__top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: auto; }
@@ -666,19 +608,4 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   }
 }
 
-/* ========== LOGO ANIMATION ========== */
-.logo-animate {
-  animation: kick-drum 0.46s cubic-bezier(0.1, 0.9, 0.2, 1) infinite, slow-spin 15s linear infinite;
-  transform-origin: center;
-}
 
-@keyframes kick-drum {
-  0% { scale: 1.15; filter: drop-shadow(0 0 40px rgba(125,244,255,0.9)); }
-  30% { scale: 1; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); }
-  100% { scale: 1; filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); }
-}
-
-@keyframes slow-spin {
-  0% { rotate: 0deg; }
-  100% { rotate: 360deg; }
-}
